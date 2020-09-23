@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>World Population Data Visualization</title>
+
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script type="module" src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="dropdown" id="type-dropdown">
+        <button class="dropdown-button">
+          <p>Type</p>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+      </div>
+      <div class="dropdown" id="region-dropdown">
+        <button class="dropdown-button">
+          <p>Region</p>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+      </div>
+      <div class="dropdown" id="country-dropdown">
+        <button class="dropdown-button">
+          <p>Country</p>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+        </div>
+      </div>
+      <button id="add-button">Add</button>
+      <button id="clear-button">Clear</button>
+    </header>
+    <main>
+      <div class="float-content">
+        <button class="float-button">
+          <i class="fa fa-caret-left"></i>
+          <p>Inspire us!</p>
+          <i class="fa fa-caret-left"></i>
+        </button>
+        <div class="float-form">
+          <form id="update-form">
+            <h1>Inspire us!</h1>
+
+            <label for="code">Code</label>
+            <select id="code" name="code">
+              <option value="new">New Code</option>
+            </select>
+            <input type="text" id="newcode" placeholder="Enter code">
+            <br>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter name">
+
+            <label for="region">Region</label>
+            <input type="text" id="region" name="region" placeholder="Enter region">
+
+            <label for="year">Year</label>
+            <select id="year" name="year">
+              <option value="none">None</option>
+            </select><br>
+            
+            <label for="data">Population</label>
+            <input type="number" id="data" name="data" placeholder="Enter population">
+
+            <button type="submit" id="submit-form-button">Submit</button>
+            <button id="clear-form-button">Clear</button>
+          </form>
+        </div>
+      </div>
+      <section>
+        <div class="container background-color-A">
+          <div class="options">
+            <div class="options-content">
+            </div>
+          </div>
+          <div class="dividing-line"></div>
+          <div class="chart">
+            <canvas id="bar-chart"></canvas>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container background-color-B">
+          <canvas id="line-chart"></canvas>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Data Credit to © 2019 The World Bank Group</p>
+
+    </footer>
+  </body>
+</html>

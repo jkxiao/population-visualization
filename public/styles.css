@@ -1,0 +1,299 @@
+:root {
+  box-sizing: border-box;
+  font-family: Courier, Times;
+}
+
+* {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.hidden, .template {
+  display: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-color-main {
+  background-color: #0B0C10;
+}
+
+.background-color-A {
+  background-color: #1F2833;
+}
+
+.background-color-B {
+  background-color: #C5C6C7;
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  color: #66FCF1;
+  background-color: #0B0C10;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  color: #45A29E;
+  background-color: #0B0C10;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+#add-button, #clear-button {
+  width: 10rem;
+  margin-left: 2.5rem;
+  font-size: 1.5rem;
+  color: #66FCF1;
+  background-color: inherit;
+  border-color: #66FCF1;
+  border-width: 5px;
+  border-radius: 25px;
+  padding: 0;
+}
+
+.dropdown {
+  width: 20vw;
+  background-color: inherit;
+}
+
+.dropdown-button {
+  width: inherit;
+  padding: 20px;
+  margin: 0;
+  font-size: 2rem;
+  border-width: 0;
+  color: #66FCF1;
+  background-color: inherit;
+  font-family: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-button p {
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dropdown-button i {
+  width: 2.5vw;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown:hover .dropdown-button, .dropdown-content button:hover, #add-button:hover, #clear-button:hover {
+  color: #0B0C10;
+  background-color: #66FCF1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  width: inherit;
+  position: absolute;
+  z-index: 1;
+  max-height: 50vh;
+  overflow: scroll;
+}
+
+.dropdown-content button {
+  width: inherit;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #66FCF1;
+  background-color: #0B0C10;
+  border: none;
+  text-align: left;
+  overflow: scroll;
+}
+
+.options {
+  width: 15vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-content {
+  width: 10vw;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.options-content button {
+  width: inherit;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #66FCF1;
+  background-color: #0B0C10;
+  border-color: #66FCF1;
+  border-width: 1px;
+  padding: 0;
+  text-align: center;
+}
+
+.options-content button:hover {
+  color: #0B0C10;
+  background-color: #66FCF1;
+}
+
+.options-content .clicked {
+  color: #0B0C10;
+  background-color: #66FCF1;
+}
+
+.dividing-line {
+  width: 0.1vw;
+  height: 100vh;
+  background: linear-gradient(#66FCF1, #45A29E);
+}
+
+.chart {
+  width: 85vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+canvas {
+  padding: 5rem;
+}
+
+.float-content {
+  position: fixed;
+  top: 40vh;
+  right: 0;
+  z-index: 1;
+}
+
+.float-form {
+  display: none;
+  position: fixed;
+  top: 30vh;
+  right: 5rem;
+  z-index: 1;
+}
+
+.float-button {
+  height: 20vh;
+  margin-left: 2.5rem;
+  font-size: 1.5rem;
+  color: #45A29E;
+  background-color: #0B0C10;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.float-content:hover .float-form {
+  display: block;
+}
+
+.float-content:hover .float-button {
+  color: #0B0C10;
+  background-color: #45A29E;
+}
+
+.float-content p {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.float-form form {
+  width: 400px;
+  padding: 10px;
+  background-color: white;
+}
+
+.float-form h1 {
+  text-align: center;
+}
+
+.float-form label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.float-form input {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  margin: 5px 0 20px 0;
+  /* border: none; */
+  background: #F1F1F1;
+}
+
+#newcode {
+  width: 150px;
+  margin: 0;
+  float: right;
+}
+
+.float-form select {
+  width: 150px;
+  height: 20px;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+  /* border: none; */
+  background: #F1F1F1;
+}
+
+.float-form input:focus {
+  background-color: #DDDDDD;
+  outline: none;
+}
+
+.float-form button {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+#submit-form-button {
+  background-color: #009B76;
+}
+
+#clear-form-button {
+  background-color: #B1040E;
+}
+
+.float-form button:hover {
+  opacity: 1;
+}
