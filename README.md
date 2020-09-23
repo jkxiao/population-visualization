@@ -1,7 +1,6 @@
 # World Population Data Visualization
 
-CS193X Final Project
-====================
+## CS193X Final Project
 
 Project Name: World Population Data Visualization
 Your Name: Jiankai Xiao
